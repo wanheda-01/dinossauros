@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Dinossauros</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dinossauros</h1>
+        <label for="mode" class="sr-only">Alternar modo escuro/claro</label>
+        <input type="checkbox" id="mode" aria-label="Alternar entre modo escuro e claro">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contatos.html" aria-current="page">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo">Contate-Nos</h2>
+        <p id="frase">Se você tiver dúvidas ou quiser saber mais sobre os dinossauros, entre em contato conosco!</p>
+
+        <section id="contact-info">
+            <h3>Informações de Contato</h3>
+            <address>
+                <p><strong>Endereço:</strong> Rua dos Dinossauros, 123 - Jardim Jurássico, 00000-000, São Paulo, SP</p>
+                <p><strong>Telefone:</strong> +55 (11) 1234-5678</p>
+                <p><strong>Email:</strong> <a href="mailto:contato@mundodosdinossauros.com">contato@mundodosdinossauros.com</a></p>
+            </address>
+            <div id="social-media">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="https://facebook.com/mundodosdinossauros" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://twitter.com/mundodosdino" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="https://instagram.com/mundodosdinossauros" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact-form">
+            <h3>Formulário de Contato</h3>
+            <form id="contact-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="form-feedback"></p>
+        </section>
+
+        <section id="map">
+            <h3>Nos Encontre Aqui</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.287097349272!2d-46.655155684406295!3d-23.585974984693593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce54b0b2261a5d%3A0x4cddbd2c14c7b8c!2sRua%20dos%20Dinossauros%2C%20123%2C%20Jardim%20Jur%C3%A1ssico%2C%20S%C3%A3o%20Paulo%2C%20SP%2C%2000000-000!5e0!3m2!1spt-BR!2sbr!4v1619197958042!5m2!1spt-BR!2sbr" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mundo dos Dinossauros. Todos os direitos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="dark.js" defer></script>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var feedback = document.getElementById('form-feedback');
+
+            if (name && email && message) {
+                feedback.textContent = 'Obrigado por entrar em contato! Responderemos em breve.';
+                feedback.style.color = 'green';
+                return false; // Simula o envio e evita o envio real do formulário
+            } else {
+                feedback.textContent = 'Por favor, preencha todos os campos.';
+                feedback.style.color = 'red';
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinossauros - Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dinossauros</h1>
+        <label for="mode" class="sr-only">Alternar modo escuro/claro</label>
+        <input type="checkbox" id="mode" aria-label="Alternar modo escuro/claro">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Espécies</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo">Bem-vindo ao Mundo dos Dinossauros</h2>
+
+        <section class="slider">
+            <div class="slides-container">
+                <figure class="slide active">
+                    <img src="1_brachiosaurus_braquiossauro_22652_2_600.jpg" alt="Brachiosaurus" />
+                    <figcaption>Brachiosaurus</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="2_diplodocus_diplodoco_22652_3_600.jpg" alt="Diplodocus" />
+                    <figcaptionDiplodocus>Diplodocus</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="3_stegosaurus_estegossauro_22652_4_600.jpg" alt="Stegosaurus" />
+                    <figcaption>Stegosaurus</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="4_triceratops_triceratopo_22652_5_600.jpg" alt="Triceratops" />
+                    <figcaption>Triceratops</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="6_patagotitan_mayorum_22652_7_600.jpg" alt="Patagotitan" />
+                    <figcaption>Patagotitan</figcaption>
+                </figure>
+            </div>
+            <button class="prev" aria-label="Slide anterior">&#10094;</button>
+            <button class="next" aria-label="Próximo slide">&#10095;</button>
+        </section>
+
+        <p id="frase">Explore a fascinante história dos dinossauros, suas espécies e curiosidades.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mundo dos Dinossauros</p>
+    </footer>
+
+    <script src="index.js" defer></script>
+    <script src="dark.js" defer></script>
+</body>
+
+</html>

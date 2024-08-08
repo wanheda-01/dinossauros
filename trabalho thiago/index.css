@@ -1,0 +1,303 @@
+/* Definindo o estilo geral do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b2c4ca;
+    color: #333;
+}
+body.dark{
+    background: none;
+    background-color: #161a22;
+    color: white;
+}
+/* Estilo do cabeçalho */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f8e21d;
+    text-shadow: 0 0 10px rgba(255, 253, 253, 0.938);
+}
+
+/* Estilo principal */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Estilo do parágrafo principal */
+main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Estilo do formulário de contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgb(99, 97, 97);
+    border-radius: 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Estilo do slider */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease, background-color 0.3s, transform 0.3s;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Estilo da galeria */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    border: 4px solid #4CAF50;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adicionando animação ao slider */
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+.slide {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Melhorando a responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .slider {
+        width: 90%;
+    }
+
+    .gallery img {
+        width: 150px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+input[type="checkbox"]{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    /* background-color: yellow; */
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/1078352-paisagem-noite-dinossauro-gratis-vetor.jpg);
+    background-size: cover;
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #1b222e;
+    border-radius: 50px;
+}
+
+
+
+input[type="checkbox"]:checked:before{
+    transform: translate(100%);
+    background-color: white;
+}
+
+input[type="checkbox"]:checked{
+    background-image: url(https://img.freepik.com/vetores-premium/dinossauros-sauropodes-e-pterodacteis-a-noite_116137-15.jpg?w=996);
+}
+
+#frase{
+    color:#333 ;
+}
+#frase.dark{
+    color:white;
+}
+
+#frasee{
+    color: #333;
+}
+#frasee.dark{
+    color:white;
+}
+
+.titulo{
+    color: #333;
+}
+
+.titulo.dark{
+    color: white;
+}

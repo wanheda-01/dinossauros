@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra informações detalhadas sobre diversas espécies de dinossauros. Explore Brachiosaurus, Diplodocus, Stegosaurus, Triceratops e Patagotitan.">
+    <title>Dinossauros - Espécies</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dinossauros</h1>
+        <label for="mode" class="sr-only">Alternar modo escuro/claro</label>
+        <input type="checkbox" id="mode" aria-label="Alternar entre modo escuro e claro">
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="sobre.html">Espécies</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo">Espécies de Dinossauros</h2>
+        <p id="frase">Aqui você encontra informações sobre diversas espécies de dinossauros.</p>
+        
+        <section id="dinossauros" aria-labelledby="espécies-destaque">
+            <h3 id="espécies-destaque">Espécies em Destaque</h3>
+            <article aria-labelledby="brachiosaurus">
+                <h4 id="brachiosaurus">Brachiosaurus</h4>
+                <p>Brachiosaurus é um gênero de dinossauro saurópode que viveu na América do Norte durante o Jurássico Superior, cerca de 154–150 milhões de anos atrás. Foi descrito pela primeira vez pelo paleontólogo americano Elmer S. Riggs em 1903, quando fósseis foram descobertos no vale do Rio Colorado, na região das Montanhas Rochosas dos Estados Unidos.</p>
+            </article>
+
+            <article aria-labelledby="diplodocus">
+                <h4 id="diplodocus">Diplodocus</h4>
+                <p>Diplodocus é um gênero de dinossauro saurópode herbívoro e quadrúpede que viveu durante o período Jurássico há aproximadamente 154 a 152 milhões de anos. O seu nome significa "dupla alavanca", referindo-se à disposição dos ossos da parte posterior da cauda. O Diplodocus tinha uma cauda com mais de 15 metros, mais longa do que um terópode de grande porte.</p>
+            </article>
+
+            <article aria-labelledby="stegosaurus">
+                <h4 id="stegosaurus">Stegosaurus</h4>
+                <p>Stegosaurus é um gênero de dinossauros herbívoros tireóforos. Os fósseis deste gênero datam do período Jurássico Superior, do período Kimmeridgiano aos primeiros estratos envelhecidos do Tithoniano, entre 155 e 148 milhões de anos atrás. Foram encontrados no oeste dos Estados Unidos e em Portugal.</p>
+            </article>
+
+            <article aria-labelledby="triceratops">
+                <h4 id="triceratops">Triceratops</h4>
+                <p>Triceratops é um gênero de dinossauro ceratopsídeo, da subfamília Chasmosaurinae. Era um herbívoro quadrúpede que viveu no fim do período Cretáceo, durante o Maastrichtiano, principalmente na região que é hoje a América do Norte. É um dos últimos gêneros conhecidos de dinossauros não-aviários e extinguiu-se no evento de extinção do Cretáceo-Paleogeno há 66 milhões de anos.</p>
+            </article>
+
+            <article aria-labelledby="patagotitan">
+                <h4 id="patagotitan">Patagotitan</h4>
+                <p>Patagotitan é um gênero de dinossauro titanossauro saurópode da Formação Cerro Barcino, na província de Chubut, Patagônia, Argentina. O gênero contém uma única espécie conhecida, Patagotitan mayorum, que foi anunciada pela primeira vez em 2014 e nomeada em 2017 por José Carballido e colegas.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mundo dos Dinossauros. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="dark.js" defer></script>
+</body>
+
+</html>
